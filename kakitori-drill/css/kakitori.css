@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+html {
+    /* 組み方向 */
+    writing-mode: vertical-rl;
+    /* フォント */
+    font-family: "游明朝", "YuMincho", serif;
+    font-weight: normal;
+    /* フォントサイズ */
+    --font-size: 10pt;
+    /* 行送り */
+    --body-line-height: 18pt;
+    /* 行長（文字数） */
+    --line-count: 23;
+    /* 行数 */
+    --line-length: 18;
+    /* 基本版面の天からの距離 */
+    --page-margin-top: 10mm;
+    /* 基本版面の小口からの距離 */
+    --page-margin-outside: 5mm;
+    /* 行末揃え */
+    text-align: justify;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@page {
+    size: A4 landscape;
+    margin-top: 10mm;
+    margin-bottom: auto;
+    margin-left: 15mm;
+    margin-right: 15mm;
+}
+h1 {
+    --block-size: calc(var(--body-line-height) * var(--lines));
+    width: 37pt;
+    line-height: 1em;
+    padding-right: 17pt;
+}
+
+div.mondai {
+  margin-right: 30pt;
+}
+
+dl dt, dl dd {
+  font-size: 14pt;
+  line-height: 4.5em;
+}
+
+div.box {
+  position: relative;
+  display: inline-block;
+  width: 4.5em;
+  height: 4.5em;
+  border: 2pt solid black;
+  margin: 1pt;
+}
+
+div.box span.ruby {
+  position: absolute;
+  right: -1.3em;
+  line-height: 1em;
+  text-align: center;
+  height: 5em;
+}
+
+div.coupon {
+  margin-right: 10mm;
+  width: 100mm;
+  height: 50mm;
+  border: 2pt dotted black;
+  transform-origin: 40% 100%;
+  transform: rotate(90deg);
+  text-align: center;
+  writing-mode: horizontal-tb;
+  padding: 2em;
+}
+
+div.coupon h3 {
+  font-size: 20pt;
+}
+div.coupon p {
+  font-size: 14pt;
+}
+
+figure.illust {
+  width: 50mm;
+  height: 100mm;
+  position: absolute;
+  right: 0mm;
+  bottom: 30mm;
+  margin: 0px;
+  padding: 0px;
+  z-index: -1;
+}
+
+figure.illust img {
+  width: 100%;
+}
